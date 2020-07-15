@@ -1,14 +1,14 @@
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 metadata:
-        name: ritz-cluster
+        name: CLUSTER_NAME
         region: ap-south-1
 nodeGroups:
         - name: ng1
           desiredCapacity: 3
           instanceType: t2.micro
           ssh:
-                 publicKeyName: eks_key3
+                 publicKeyName: KEY_NAME
 
 
         - name: ng-1
@@ -21,4 +21,4 @@ nodeGroups:
              onDemandPercentageAboveBaseCapacity: 50
              spotInstancePools: 2
           ssh:
-                  publicKeyName: eks_key3
+                  publicKeyName: KEY_NAME
